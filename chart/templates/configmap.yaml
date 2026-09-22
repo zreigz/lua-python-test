@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    app.kubernetes.io/name: k8s-object-meta-probe
+    app.kubernetes.io/instance: {{ .Release.Name }}
+data:
+  observeClusterId: {{ .Values.observeClusterId | quote }}
+  label: {{ index .Values.labels "kubernetes.io/metadata.name" | default "" | quote }}
+  missing: {{ .Values.missing | quote }}

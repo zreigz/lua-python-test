@@ -1,0 +1,22 @@
+apiVersion: deployments.plural.sh/v1alpha1
+kind: ServiceDeployment
+metadata:
+  name: k8s-object-meta-python
+  namespace: default
+spec:
+  version: 0.0.1
+  name: k8s-object-meta-python
+  namespace: k8s-object-meta-probe
+  git:
+    folder: chart
+    ref: main
+  repositoryRef:
+    kind: GitRepository
+    name: lua-python-test
+    namespace: default
+  clusterRef:
+    kind: Cluster
+    name: lukaszz
+    namespace: default
+  helm:
+    pythonFile: probe.py

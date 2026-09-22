@@ -1,0 +1,8 @@
+apiVersion: deployments.plural.sh/v1alpha1
+kind: GitRepository
+metadata:
+  name: lua-python-test
+  namespace: default
+spec:
+  # Set this to the clone URL after you push the repo.
+  url: https://github.com/zreigz/lua-python-test.git

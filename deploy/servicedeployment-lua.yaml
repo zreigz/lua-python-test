@@ -13,9 +13,7 @@ spec:
   repositoryRef:
     kind: GitRepository
     name: lua-python-test
-  clusterRef:
-    kind: Cluster
-    name: lukasz
-    namespace: default
+  cluster: mgmt
+  clusterRef: {}
   helm:
     luaFile: probe.lua

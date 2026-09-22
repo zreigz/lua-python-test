@@ -13,10 +13,9 @@ spec:
   repositoryRef:
     kind: GitRepository
     name: lua-python-test
-    namespace: default
   clusterRef:
     kind: Cluster
-    name: lukaszz
+    name: lukasz
     namespace: default
   helm:
     pythonFile: probe.py

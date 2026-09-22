@@ -1,4 +1,4 @@
-ns = k8s_object_meta("", "v1", "Namespace", "", "kube-system")
+ns = k8s_object_meta("", "v1", "Namespace", "", "agents")
 if ns is None:
     raise RuntimeError("kube-system Namespace is not in the agent cache")
 

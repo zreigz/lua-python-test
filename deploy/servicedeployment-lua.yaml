@@ -13,7 +13,6 @@ spec:
   repositoryRef:
     kind: GitRepository
     name: lua-python-test
-    namespace: default
   clusterRef:
     kind: Cluster
     name: lukasz
